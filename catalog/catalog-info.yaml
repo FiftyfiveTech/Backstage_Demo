@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: org-data
+spec:
+  targets:
+    - ./info/group.yaml
+    - ./info/domain.yaml
+    - ./info/system.yaml
+    - ./info/component.yaml
+    - ./info/resource.yaml
+    - ./info/api.yaml
