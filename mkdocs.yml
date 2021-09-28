@@ -1,0 +1,9 @@
+site_name: 'Component documentation'
+
+nav:
+  - Home: index.md
+  - Integration:
+      Techdocs: integration/techdocs.md
+
+plugins:
+  - techdocs-core
