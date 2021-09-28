@@ -1,0 +1,67 @@
+apiVersion: backstage.io/v1beta2
+kind: Template
+# some metadata about the template itself
+metadata:
+  name: Shell template
+  title: Shell template as a boiler plate
+  description: It will generate boiler plate code for you service
+spec:
+  owner: master
+  type: template
+
+  parameters:
+    # Basic information of the component
+    - title: Details of the go service package
+      required:
+        - name
+        - need_database
+      properties:
+        name:
+          title: Unique name of the service/component
+          type: string
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+        need_database:
+          title: Is database required?
+          type: string
+          ui:widget: radio
+          oneOf:
+            - title: Yes
+              const: "y"
+            - title: No
+              const: "n"
+              
+    - title: Details of the repository
+      required:
+        - repoUrl
+      properties:
+        repoUrl:
+          title: Repository Location
+          type: string
+          ui:field: RepoUrlPicker
+          ui:options:
+            allowedHosts:
+              - github.com
+
+  # here's the steps that are executed in series in the scaffolder backend
+  steps:
+    - id: fetch-base
+      name: Fetch Base
+      action: fetch:template
+      input:
+        url: https://github.com/gelatoas/go-platform-shared-templates/tree/master/service-template
+        values:
+          service_name: "{{ parameters.name }}"
+          need_database: "{{ parameters.need_database }}"
+    - id: publish
+      name: Publish
+      action: publish:github
+      input:
+        allowedHosts: ["github.com"]
+        description: "This is {{ parameters.name }}"
+        repoUrl: "{{ parameters.repoUrl }}"
+
+  output:
+    remoteUrl: "{{ steps.publish.output.remoteUrl }}"
+    entityRef: "{{ steps.register.output.entityRef }}"
