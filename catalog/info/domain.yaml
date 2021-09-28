@@ -1,0 +1,7 @@
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: gaming
+  description: 55tech gaming
+spec:
+  owner: 55tech
