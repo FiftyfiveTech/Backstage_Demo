@@ -4,7 +4,6 @@ metadata:
   name: org-data
 spec:
   targets:
-    - ./info/group.yaml
     - ./info/domain.yaml
     - ./info/system.yaml
     - ./info/component.yaml
