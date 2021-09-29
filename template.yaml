@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1beta2
 kind: Template
 # some metadata about the template itself
 metadata:
-  name: Shell template
+  name: shell-template
   title: Shell template as a boiler plate
   description: It will generate boiler plate code for you service
 spec:
