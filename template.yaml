@@ -50,7 +50,7 @@ spec:
       name: Fetch Base
       action: fetch:template
       input:
-        url: https://github.com/gelatoas/go-platform-shared-templates/tree/master/service-template
+        url: https://github.com/Sahil-Gulati/55-backstage-demo/tree/main
         values:
           service_name: "{{ parameters.name }}"
           need_database: "{{ parameters.need_database }}"
