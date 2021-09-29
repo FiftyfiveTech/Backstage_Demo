@@ -11,9 +11,13 @@
 </span>
 
 ## About the Workshop 
-<img align=right width="30%" height="40%" src="https://engineering.atspotify.com/wp-content/uploads/sites/2/2020/03/What-is-Backstage.png" />
+<img align=right src="https://engineering.atspotify.com/wp-content/uploads/sites/2/2020/03/What-is-Backstage.png" />
+
+
 
 #### Instructions to set up the Bakstage stage application 
+
+
 
 #### To setup npx and node js in linux 
 
@@ -37,8 +41,6 @@ npx @backstage/create-app
 
 ```bash 
 
-cd backstage_application 
-
 # Docker and Docker compose must be installed before the setup 
 sudo apt update
 sudo apt install docker-ce -y 
@@ -52,6 +54,8 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 docker-compose --version
+
+cd backstage_application 
 
 # It will create the database 
 
@@ -73,15 +77,27 @@ volumes:
     database-data:
 EOF
 
+```
+
+<img align='bottom' width="100%" height="100%" src="assets/docker-compose.gif" />
+
+```bash
 # It will replace all the variables in the app config file 
 sed -i 's/${POSTGRES_HOST}/localhost/g' app-config.yaml ; sed -i 's/${POSTGRES_PORT}/5430/g' app-config.yaml ; sed -i 's/${POSTGRES_USER}/postgres/g' app-config.yaml ; sed -i 's/${POSTGRES_PASSWORD}/password@123/g' app-config.yaml
 
 # To start the backend application 
 yarn start-backend
+
+```
+<img align='bottom' width="100%" height="100%" src="assets/Backend.gif" />
+
+```bash 
 # To start the frontend application 
 yarn start 
 
 ```
+<img align='bottom' width="100%" height="100%" src="assets/Frontend.gif" />
 
+#### A short summary of how we setup the backstage application
 
 
