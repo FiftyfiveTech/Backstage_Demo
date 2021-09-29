@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: rabbitmq-resource
+  description: This is the rabbitmq broker for handling requests from react-ui
+spec:
+  type: broker
+  owner: 55tech
+  system: payments

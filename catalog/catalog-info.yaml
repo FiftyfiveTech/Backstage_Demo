@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  name: org-data
+  name: location-to-all-entities
 spec:
   targets:
     - ./info/domain.yaml

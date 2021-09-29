@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: react-ui
+  description: This is the UI built on react framework.
+  tags:
+    - js
+    - react
+spec:
+  type: service
+  lifecycle: production
+  owner: 55tech
+  system: payments
+  dependsOn:
+    - "resource:rabbitmq-resource"
+  providesApis:
+    - "razorpay-api"

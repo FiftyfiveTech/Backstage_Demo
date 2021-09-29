@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: Payments
+  name: payments
   description: Payment system for handling transaction related things
   tags:
     - go
