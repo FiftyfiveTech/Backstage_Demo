@@ -13,11 +13,7 @@
 ## About the Workshop 
 <img align=right src="https://engineering.atspotify.com/wp-content/uploads/sites/2/2020/03/What-is-Backstage.png" />
 
-
-
 #### Instructions to set up the Bakstage stage application 
-
-
 
 #### To setup npx and node js in linux 
 
@@ -33,7 +29,10 @@ npm i npx -g # To install it globally in the linux
 npx @backstage/create-app
 
 ```
+
 <img align='bottom' width="100%" height="100%" src="assets/demo.gif" />
+
+
 
 #### To setup the application we used `postgres` as the database
 
