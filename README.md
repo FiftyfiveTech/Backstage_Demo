@@ -68,7 +68,8 @@ npx @backstage/create-app
 ```bash 
 
 # Please enter the name of the backstage applcation 
-cd <Backstage_Applcation_name>
+cd <Backstage_Applcation_name> # 55backstage-app can 
+
 
 # This will create a docker compose file. 
 
@@ -102,6 +103,9 @@ docker-compose up
 
 # It will replace all the variables in the app config file 
 sed -i 's/${POSTGRES_HOST}/localhost/g' app-config.yaml ; sed -i 's/${POSTGRES_PORT}/5430/g' app-config.yaml ; sed -i 's/${POSTGRES_USER}/postgres/g' app-config.yaml ; sed -i 's/${POSTGRES_PASSWORD}/password@123/g' app-config.yaml
+
+# To clean the pre-existing components from the backstage 
+
 
 # To start the backend application 
 yarn start-backend
