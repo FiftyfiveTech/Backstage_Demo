@@ -82,13 +82,8 @@ services:
     environment:
       POSTGRES_USER: postgres 
       POSTGRES_PASSWORD: password@123
-    volumes: 
-      - database-data:/var/lib/postgresql/data/
     ports:
       - 5430:5432
-
-volumes:
-    database-data:
 EOF
 
 # Now we have to make our database up and running 
@@ -122,4 +117,38 @@ yarn start
 
 #### A short summary of how we setup the backstage application
 
+```bash 
 
+# Directory structure for our backstage template 
+
+├── catalog
+│   ├── catalog-info.yaml
+│   └── info
+│       ├── api-1.yaml
+│       ├── api-2.yaml
+│       ├── component.yaml
+│       ├── domain.yaml
+│       ├── group.yaml
+│       ├── resource-1.yaml
+│       ├── resource-2.yaml
+│       ├── system.yaml
+│       ├── user-1.yaml
+│       ├── user-2.yaml
+│       └── user-3.yaml
+├── docker-compose.yaml
+├── docs
+│   ├── index.md
+│   └── integrations
+│       ├── catalog.md
+│       └── techdocs.md
+├── mkdocs.yml
+├── README.md
+├── template
+│   ├── info.sh
+│   └── src
+│       └── ${{ values.service_name }}
+│           └── index.js
+└── template.yaml
+
+
+```
