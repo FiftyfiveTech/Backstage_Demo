@@ -23,7 +23,7 @@ spec:
           ui:autofocus: true
           ui:options:
             rows: 5
-        name:
+        port:
           title: Port of the service
           type: number
         need_database:
