@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Bhawani
+spec:
+  profile:
+    displayName: Bhawani
+    email: bhawani@fiftyfivetech.io
+  memberOf: [55tech]
