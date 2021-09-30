@@ -5,8 +5,4 @@ metadata:
 spec:
   targets:
     - ./info/domain.yaml
-    - ./info/system.yaml
-    - ./info/component.yaml
-    - ./info/resource-1.yaml
-    - ./info/resource-2.yaml
 
