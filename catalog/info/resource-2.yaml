@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: aws-s3-resource
+  description: This is the rabbitmq broker for handling requests from react-ui
+spec:
+  type: s3-bucket
+  owner: 55tech
+  system: payments
