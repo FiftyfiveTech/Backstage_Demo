@@ -4,4 +4,12 @@ metadata:
   name: location-to-all-entities
 spec:
   targets:
+  - ./info/group.yaml
+  - ./info/domain.yaml
+  - ./info/system.yaml
   - ./info/component.yaml
+  - ./info/component.yaml
+  - ./info/api-1.yaml
+  - ./info/api-2.yaml
+  - ./info/resource-2.yaml
+  - ./info/resource-1.yaml
