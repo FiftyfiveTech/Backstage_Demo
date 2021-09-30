@@ -11,7 +11,9 @@
 </span>
 
 ## About the Workshop 
-<img align=right src="https://engineering.atspotify.com/wp-content/uploads/sites/2/2020/03/What-is-Backstage.png" />
+
+![image](https://engineering.atspotify.com/wp-content/uploads/sites/2/2020/03/What-is-Backstage.png)
+<!-- <img align=right src="https://engineering.atspotify.com/wp-content/uploads/sites/2/2020/03/What-is-Backstage.png" /> -->
 
 
 #### Prerequisite to Deploy backstage locally 
