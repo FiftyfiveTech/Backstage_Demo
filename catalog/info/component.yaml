@@ -6,6 +6,10 @@ metadata:
   tags:
     - js
     - react
+  annotations:
+    circleci.com/project-slug: github/sahil-gulati/55-backstage-demo
+    github.com/project-slug: sahil-gulati/55-backstage-demo
+    backstage.io/techdocs-ref: url:https://github.com/Sahil-Gulati/55-backstage-demo/tree/main/
 spec:
   type: service
   lifecycle: production
