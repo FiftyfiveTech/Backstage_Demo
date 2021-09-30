@@ -28,6 +28,9 @@ sudo apt install npm -y
 # Installing npx 
 sudo npm i npx -g # To install it globally in the linux 
 
+# For Windows in cmd 
+
+
 # Installing Docker and Docker Compose 
 
 sudo apt update

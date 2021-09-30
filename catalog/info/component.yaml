@@ -6,6 +6,8 @@ metadata:
   tags:
     - js
     - react
+  annotations:
+    backstage.io/techdocs-ref: url:https://github.com/FiftyfiveTech/Backstage_Demo/tree/master
 spec:
   type: service
   lifecycle: production
