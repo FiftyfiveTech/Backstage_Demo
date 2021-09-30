@@ -9,6 +9,4 @@ spec:
     - ./info/component.yaml
     - ./info/resource-1.yaml
     - ./info/resource-2.yaml
-    - ./info/api-1.yaml
-    - ./info/api-2.yaml
 
