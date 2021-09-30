@@ -5,4 +5,3 @@ metadata:
 spec:
   targets:
     - ./info/domain.yaml
-
