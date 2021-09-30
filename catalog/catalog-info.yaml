@@ -12,3 +12,6 @@ spec:
   - ./info/api-2.yaml
   - ./info/resource-2.yaml
   - ./info/resource-1.yaml
+  - ./info/user-1.yaml
+  - ./info/user-2.yaml
+  - ./info/user-3.yaml
