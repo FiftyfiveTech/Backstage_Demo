@@ -13,34 +13,21 @@
 ## About the Workshop 
 <img align=right src="https://engineering.atspotify.com/wp-content/uploads/sites/2/2020/03/What-is-Backstage.png" />
 
-#### Instructions to set up the Bakstage stage application 
 
-#### To setup npx and node js in linux 
+#### Prerequisite to Deploy backstage locally 
 
 ```bash
+
+# User must have node, npm, npx, Docker and Docker Compose.  
 sudo apt update
 sudo apt install nodejs -y 
 sudo apt install npm -y 
 
 # Installing npx 
-npm i npx -g # To install it globally in the linux 
+sudo npm i npx -g # To install it globally in the linux 
 
-# create application 55backstage app
-npx @backstage/create-app
+# Installing Docker and Docker Compose 
 
-```
-
-<img align='bottom' width="100%" height="100%" src="assets/demo.gif" />
-
-
-
-#### To setup the application we used `postgres` as the database
-
-#### Make sure that you have installed Docker and docker compose for this setup 
-
-```bash 
-
-# Docker and Docker compose must be installed before the setup 
 sudo apt update
 sudo apt install docker-ce -y 
 
@@ -54,9 +41,31 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 docker-compose --version
 
-cd backstage_application 
 
-# It will create the database 
+```
+#### Instructions to set up the Bakstage stage application
+
+
+```bash 
+
+# create application 55backstage app
+npx @backstage/create-app
+
+```
+
+* It will prompt for the `Backstage name`
+* Please use `Postgres SQL` as the database when it prompt.
+
+
+<img align='bottom' width="100%" height="100%" src="assets/demo.gif" />
+
+
+```bash 
+
+# Please enter the name of the backstage applcation 
+cd <Backstage_Applcation_name>
+
+# This will create a docker compose file. 
 
 cat <<EOF >$(pwd)/docker-compose.yaml
 version: '3'
@@ -76,11 +85,16 @@ volumes:
     database-data:
 EOF
 
+# Now we have to make our database up and running 
+docker-compose up 
+
 ```
+
 
 <img align='bottom' width="100%" height="100%" src="assets/docker-compose.gif" />
 
 ```bash
+
 # It will replace all the variables in the app config file 
 sed -i 's/${POSTGRES_HOST}/localhost/g' app-config.yaml ; sed -i 's/${POSTGRES_PORT}/5430/g' app-config.yaml ; sed -i 's/${POSTGRES_USER}/postgres/g' app-config.yaml ; sed -i 's/${POSTGRES_PASSWORD}/password@123/g' app-config.yaml
 
