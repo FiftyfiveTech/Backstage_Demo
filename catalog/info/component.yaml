@@ -13,5 +13,7 @@ spec:
   system: payments
   dependsOn:
     - "resource:rabbitmq-resource"
+    - "resource:aws-s3-resource"
   providesApis:
-    - "razorpay-api"
+    - "razorpay-wrapper-api"
+    - "ccvenue-wrapper-api"
