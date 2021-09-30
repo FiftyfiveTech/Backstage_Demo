@@ -21,3 +21,4 @@ spec:
   providesApis:
     - "razorpay-wrapper-api"
     - "ccvenue-wrapper-api"
+
