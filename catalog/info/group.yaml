@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: 55tech
+  description: 55tech platform
+spec:
+  type: team
+  profile:
+    displayName: 55tech gaming team
+  parent: development
+  children: []

@@ -7,7 +7,10 @@ metadata:
     - js
     - react
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/FiftyfiveTech/Backstage_Demo/tree/main
+    sentry.io/project-slug: testing-sentry-05
+    circleci.com/project-slug: github/sahil-gulati/55-backstage-demo
+    github.com/project-slug: sahil-gulati/55-backstage-demo
+    backstage.io/techdocs-ref: url:https://github.com/Sahil-Gulati/55-backstage-demo/tree/main/
 spec:
   type: service
   lifecycle: production
@@ -15,5 +18,7 @@ spec:
   system: payments
   dependsOn:
     - "resource:rabbitmq-resource"
+    - "resource:aws-s3-resource"
   providesApis:
-    - "razorpay-api"
+    - "razorpay-wrapper-api"
+    - "ccvenue-wrapper-api"

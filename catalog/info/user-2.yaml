@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Suraj
+spec:
+  profile:
+    displayName: Suraj
+    email: suraj@fiftyfivetech.io
+  memberOf: [55tech]
